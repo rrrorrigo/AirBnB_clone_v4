@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener('DOMContentLoaded', (e) => {
   let checked = [];
   alert("8==D importado bien");
   $.each($('input[data-id=":amenity_id"]:checked'), function () {
