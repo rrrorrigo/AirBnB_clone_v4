@@ -17,6 +17,6 @@ header #api_status {
     vertical-align: center;
     background-color: #CCCCCC;
 }
-.available {
+header .available {
     background-color: #ff545f;
 }
