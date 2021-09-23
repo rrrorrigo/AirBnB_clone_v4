@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', (e) => {
   let list = [];
   $('input:checkbox').change(function() {
-    if (this.checked) {
+    if ($(this).is(":checked")) {
       const name = ($(this).attr('data-name'));
       list.push(name);
     } else {
