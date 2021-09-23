@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', (e  ) => {
+window.addEventListener('DOMContentLoaded', (e ) => {
   /* let checked = []; */
-  const id = $('[data-id]').val();
+  const id = $('[data-id]').attr();
   alert(id);
   $('[data-id=' + id + '] input:checkbox').change(function () {
     let checked = [];
