@@ -11,15 +11,12 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }
     $('.amenities > h4').text(list.join(', '));
   });
-  const request = require('request');
-  request('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/status/', function (error, response, body) {
-    try {
-      const json = JSON.parse(body);
-      if (data.status === 'OK') {
-        $('div#api_status').addClass('available');
+  $.get('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/status/', function (data, status) {
+    alert(status);
+  });
+  
+       /*  $('div#api_status').addClass('available');
       }
     } catch {
-      $('div#api_status').removeClass('available');
-    };
-  });
+      $('div#api_status').removeClass('available'); */
 });
