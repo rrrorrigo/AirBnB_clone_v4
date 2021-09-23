@@ -12,7 +12,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
     $('.amenities > h4').text(list.join(', '));
   });
   $.getJSON('http://0.0.0.0:5001/api/v1/status/', (data) => {
+    console.log("agarra el json del status")
     if (data.status === 'OK') {
+      console.log("detecta que el status es ok")
       $('div#api_status').addClass('available');
     } else {
       $('div#api_status').removeClass('available');
