@@ -1,11 +1,11 @@
 window.addEventListener('DOMContentLoaded', (e ) => {
   /* let checked = []; */
-  const id = $('[data-id]').attr('[data-id]');
+  const id = $('input').attr('[data-id]');
   alert(id);
-  $('[data-id=' + id + '] input:checkbox').change(function () {
+  $('[data-id="' + id + '"] input:checkbox').change(function () {
     let checked = [];
     alert("entro")
-    $('[data-id=' + id + '] input:checkbox:checked').each(function () {
+    $('[data-id="' + id + '"] input:checkbox:checked').each(function () {
         checked.push($(this).attr('amenity_name'));
         alert("identifico el click");
     });
