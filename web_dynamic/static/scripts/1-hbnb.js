@@ -1,6 +1,9 @@
 window.addEventListener('DOMContentLoaded', (e) => {
+  let list = [];
   $('input:checkbox').change(function() {
-    $(this).attr('data-id');
-    alert($(this).attr('data-name'));
+    const name = ($(this).attr('data-name'));
+    list.push(name);
+    alert(list);  
+    $('.amenities > h4').text(list)
   });
 });
