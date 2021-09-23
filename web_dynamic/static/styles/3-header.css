@@ -9,7 +9,7 @@ header .logo {
     left: 20px;
     height: 100%;
 }
-header .api_status {
+header #api_status {
     align-items: right;
     border-radius: 50%;
     width: 40px;
