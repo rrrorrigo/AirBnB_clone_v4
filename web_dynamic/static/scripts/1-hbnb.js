@@ -7,8 +7,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
     } else {
       const name = ($(this).attr('data-name'));
       const i = list.indexOf(name);
-      list.splice(i, i);
+      list.splice(i, 1);
     }
-    $('.amenities > h4').text(list.join(', '))
+    $('.amenities > h4').text(list.join(', '));
   });
 });
