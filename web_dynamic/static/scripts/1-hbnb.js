@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded', (e  ) => {
   /* let checked = []; */
-  $('[data-id=":amenity_id"] input:checkbox').change(function () {
+  $('[data-id] input:checkbox').change(function () {
     let checked = [];
     alert("entro")
-    $('[data-id=":amenity_id"] input:checkbox:checked').each(function () {
+    $('[data-id] input:checkbox:checked').each(function () {
         checked.push($(this).attr('amenity_name'));
         alert("identifico el click");
     });
