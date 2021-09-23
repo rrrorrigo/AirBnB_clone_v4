@@ -11,11 +11,14 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }
     $('.amenities > h4').text(list.join(', '));
   });
-  $.getJSON('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/status/', (data) => {
-    if (data.status === 'OK') {
-      $('div#api_status').addClass('available');
-    } else {
+  request('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/status/', function (error, response, body) {
+    try {
+      const json = JSON.parse(body);
+      if (data.status === 'OK') {
+        $('div#api_status').addClass('available');
+      }
+    } catch { } finally {
       $('div#api_status').removeClass('available');
-    }
+    };
   });
 });

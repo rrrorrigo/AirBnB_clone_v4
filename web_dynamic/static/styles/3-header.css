@@ -1,26 +1,31 @@
 header {
+    display: flex;
     background: white;
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
+    flex-direction: row;
+    justify-content: space-between;
 }
 header .logo {
-    position: relative;
-    float: left;
-    background: url("../images/logo.png") no-repeat;
+    display: flex;
+    background: url(../images/logo.png) no-repeat;
     left: 20px;
     height: 100%;
     width: 50%;
+    flex-direction: row;
 }
 header #api_status {
-    position: relative;
-    float: right;
+    display: flex;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     vertical-align: middle;
     margin-right: 30px;
     background-color: #CCCCCC;
+    flex-direction: row;
+    margin-top: 1%;
+    bottom: 50%;
 }
 
 header #api_status.available {
