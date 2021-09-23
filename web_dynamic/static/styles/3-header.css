@@ -3,22 +3,19 @@ header {
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 header .logo {
     background: url("../images/logo.png") no-repeat;
     left: 20px;
     height: 100%;
-    align-items: flex-start;
 }
 header #api_status {
-    align-self: flex-end;
+    display: absolute;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     vertical-align: center;
+    margin-right: 30px;
     background-color: #CCCCCC;
 }
 header .available {
