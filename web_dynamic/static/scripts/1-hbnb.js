@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
   $("input[name=ctrl_CustomerType]:checked").attr('xmlvalue'); */
   const id = $('input[data-id]').attr('data-id');
   alert(id);
-  $('[data-id=:amenity_id] input:checkbox').change(function () {
+  $('input[data-id=:amenity_id] input:checkbox').change(function () {
     let checked = [];
     alert("entro")
     $('[data-id="' + id + '"] input:checkbox:checked').each(function () {
