@@ -8,6 +8,6 @@ window.addEventListener('DOMContentLoaded', (e) => {
       const name = ($(this).attr('data-name'));
       list.pop(name);
     }
-    $('.amenities > h4').text(list.join(', '))
+    $('.amenities > h4').text(list)
   });
 });
