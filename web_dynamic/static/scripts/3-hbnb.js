@@ -30,7 +30,22 @@ window.addEventListener('DOMContentLoaded', (e) => {
       contentType : 'application/json',
       success: function (data) {
         data.forEach(element => {
-          $('section.places').append('section.places')
+          const article = `<div class="title_box">
+          <h2></h2>
+          <div class="price_by_night"></div>
+        </div>
+        <div class="information">
+          <div class="max_guest"></div>
+                <div class="number_rooms"></div>
+                <div class="number_bathrooms"></div>
+        </div>
+        <div class="user">
+                <b>Owner:</b>
+              </div>
+              <div class="description">
+              </div>
+      </article>`;
+          $('.places').append(article)
         });
       }
     });
