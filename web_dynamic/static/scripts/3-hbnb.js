@@ -40,14 +40,29 @@ window.addEventListener('DOMContentLoaded', (e) => {
                 <div class="number_rooms"></div>
                 <div class="number_bathrooms"></div>
         </div>
-        <div class="user">
-                <b>Owner:</b>
-              </div>
-              <div class="description">
-              </div>
       </article>`;
-          $('.places').append(article)
+          $('.places').append(article);
+          $('.title_box').text(element.name);
+          $('.price_by_night').text(element.price_by_night);
+          $('.information').text(element.description);
+          $('.max_guest').text(element.max_guest);
+          $('.number_rooms').text(element.number_rooms);
+          $('.number_bathrooms').text(element.number_bathrooms);
         });
       }
     });
-});
+});/* 
+"__class__": "Place",
+    "city_id": "f059e78d-c359-4215-9e73-96309618d4d0",
+    "created_at": "2021-09-23T22:36:38.000000",
+    "description": null,
+    "id": "459d5755-4d15-4095-8eda-7f731aa6c906",
+    "latitude": null,
+    "longitude": null,
+    "max_guest": 0,
+    "name": "KIKOHIJODEPUTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "number_bathrooms": 0,
+    "number_rooms": 0,
+    "price_by_night": 0,
+    "updated_at": "2021-09-23T22:36:38.000000",
+    "user_id": "fc494781-4eba-49ef-96f8-9fd8305bc0f4" */
