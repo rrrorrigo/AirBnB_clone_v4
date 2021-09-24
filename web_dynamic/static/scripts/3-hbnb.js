@@ -28,14 +28,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
       //json object to sent to the authentication url
       data: JSON.stringify({}),
       contentType : 'application/json',
-      success: function () {
+      success: function (data) {
         alert("Thanks!");
         console.log(data);
-        console.log('siiu######################################################');
       }
     });
-  /* $.post('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/', {city_id: 'f059e78d-c359-4215-9e73-96309618d4d0'}, function (data) {
-    console.log(data);
-    console.log('siiu######################################################');
-  }, 'json'); */
 });
