@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
       const i = list.indexOf(name);
       list.splice(i, 1);
     }
-    $('.amenities > h4').text(list.join(', '));
+    $('.amenities > h4').append(list.join(', '));
   });
   $.get('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/status/', function (data, status) {
     if (status) {
@@ -42,12 +42,12 @@ window.addEventListener('DOMContentLoaded', (e) => {
         </div>
       </article>`;
           $('.places').append(article);
-          $('.title_box').text(element.name);
-          $('.price_by_night').text(element.price_by_night);
-          $('.information').text(element.description);
-          $('.max_guest').text(element.max_guest);
-          $('.number_rooms').text(element.number_rooms);
-          $('.number_bathrooms').text(element.number_bathrooms);
+          $('.title_box').append(element.name);
+          $('.price_by_night').append(element.price_by_night);
+          $('.information').append(element.description);
+          $('.max_guest').append(element.max_guest);
+          $('.number_rooms').append(element.number_rooms);
+          $('.number_bathrooms').append(element.number_bathrooms);
         });
       }
     });
