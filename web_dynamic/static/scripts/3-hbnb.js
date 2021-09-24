@@ -11,11 +11,27 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }
     $('.amenities > h4').text(list.join(', '));
   });
-  $.get('http://0.0.0.0:5001/api/v1/places_search/', function (data, status) {
+  $.get('http://0.0.0.0:5001/api/v1/status/', function (data, status) {
     if (status) {
       $('div#api_status').addClass('available');
     } else {
       $('div#api_status').removeClass('available');
     }
   });
+  $.ajax
+    ({
+      type: "POST",
+      //the url where you want to sent the userName and password to
+      url: 'http://0.0.0.0:5001/api/v1/places_search/',
+      dataType: 'json',
+      async: false,
+      //json object to sent to the authentication url
+      data: '{}',
+      success: function () {
+        alert("Thanks!"); 
+      }
+    });
+  /* $.post('http://0.0.0.0:5001/api/v1/places_search/', {}, function (data) {
+    alert(data);
+  }, json); */
 });
