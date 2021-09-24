@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
       $('div#api_status').removeClass('available');
     }
   });
-  $.ajax
+  /* $.ajax
     ({
       type: "POST",
       //the url where you want to sent the userName and password to
@@ -30,8 +30,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
       success: function () {
         alert("Thanks!"); 
       }
-    });
-  /* $.post('http://0.0.0.0:5001/api/v1/places_search/', {}, function (data) {
+    }); */
+  $.post('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/', {}, function (data) {
     alert(data);
-  }, json); */
+  }, json);
 });
