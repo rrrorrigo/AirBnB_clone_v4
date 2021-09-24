@@ -29,8 +29,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
       data: JSON.stringify({}),
       contentType : 'application/json',
       success: function (data) {
-        alert("Thanks!");
-        console.log(data);
+        data.forEach(element => {
+          $('section.places').append('section.places')
+        });
       }
     });
 });
