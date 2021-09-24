@@ -33,5 +33,5 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }); */
   $.post('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/', {}, function (data) {
     alert(data);
-  }, json);
+  }, 'json');
 });
