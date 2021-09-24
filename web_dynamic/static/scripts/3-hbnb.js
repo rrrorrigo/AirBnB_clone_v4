@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         alert("Thanks!"); 
       }
     }); */
-  $.post('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/', '{}', function (data) {
+  $.post('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/', {city_id: 'f059e78d-c359-4215-9e73-96309618d4d0'}, function (data) {
     console.log(data);
     console.log('siiu######################################################');
     alert("kikoselacome");
