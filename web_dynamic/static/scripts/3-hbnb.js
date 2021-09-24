@@ -30,7 +30,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
       contentType : 'application/json',
       success: function (data) {
         data.forEach(element => {
-          const article = `<div class="title_box">
+          const article = `<article>
+          <div class="title_box">
           <h2></h2>
           <div class="price_by_night"></div>
         </div>
