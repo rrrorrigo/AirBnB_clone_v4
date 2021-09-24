@@ -31,7 +31,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
         alert("Thanks!"); 
       }
     }); */
-  $.post('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/', {}, function (data) {
-    alert(data);
+  $.post('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/', '{}', function (data) {
+    console.log(data);
+    console.log('siiu######################################################');
+    alert("kikoselacome");
   }, 'json');
 });
