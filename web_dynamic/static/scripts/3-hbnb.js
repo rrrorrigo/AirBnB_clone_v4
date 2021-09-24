@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     }
     $('.amenities > h4').text(list.join(', '));
   });
-  $.get('http://d701e46f5948.d79346c3.hbtn-cod.io/:5001/api/v1/status/', function (data, status) {
+  $.get('http://0.0.0.0:5001/api/v1/status/', function (data, status) {
     if (status) {
       $('div#api_status').addClass('available');
     } else {
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     ({
       type: "POST",
       //the url where you want to sent the userName and password to
-      url: 'http://d701e46f5948.d79346c3.hbtn-cod.io/:5001/api/v1/places_search/',
+      url: 'http://0.0.0.0:5001/api/v1/places_search/',
       dataType: 'json',
       async: false,
       //json object to sent to the authentication url
