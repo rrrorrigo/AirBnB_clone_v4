@@ -61,6 +61,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         data: JSON.stringify(amenities_ids),
         contentType : 'application/json',
         success: function (data) {
+          $('article').remove();
           data.forEach(element => {
           const article = `<article>
           <div class="title_box">
