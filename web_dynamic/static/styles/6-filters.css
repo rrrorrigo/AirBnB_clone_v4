@@ -51,7 +51,7 @@ button:hover {
     width: 25%;
 }
 
-.amenities > h4 {
+.amenities h4 {
     text-overflow: ellipsis;
     white-space: nowrap;
 }

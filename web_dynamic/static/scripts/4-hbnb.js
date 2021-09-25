@@ -52,7 +52,15 @@ window.addEventListener('DOMContentLoaded', (e) => {
         }
       });
       $("button").click(function () {
-        
+        let amenities_ids = {"ame"}
+        $.ajax ({
+            type: "POST",
+            url: 'http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/',
+            dataType: 'json',
+            async: false,
+            data: JSON.stringify(amenities_ids),
+            contentType : 'application/json',
+            success: function (data) {
     }); 
   });
   
