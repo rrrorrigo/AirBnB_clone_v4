@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     $('input:checkbox').change(function() {
       if ($(this).is(":checked")) {
         const name = ($(this).attr('data-name'));
-        name.push(name);
+        names.push(name);
         const id = ($(this).attr('data-id'));
         ids.push(id);
       } else {
