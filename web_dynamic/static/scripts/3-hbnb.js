@@ -32,23 +32,18 @@ window.addEventListener('DOMContentLoaded', (e) => {
         data.forEach(element => {
           const article = `<article>
           <div class="title_box">
-          <h2></h2>
-          <div class="price_by_night"></div>
+          <h2>${element.name}</h2>
+          <div class="price_by_night">${element.price_by_night}</div>
         </div>
         <div class="information">
-          <div class="max_guest"></div>
-                <div class="number_rooms"></div>
-                <div class="number_bathrooms"></div>
+          ${element.description}
+          <div class="max_guest">${element.max_guest}</div>
+                <div class="number_rooms">${element.number_rooms}</div>
+                <div class="number_bathrooms">${element.number_bathrooms}</div>
         </div>
       </article>`;
           $('.places').append(article);
         });
-          $('.title_box').append(element.name);
-          $('.price_by_night').append(element.price_by_night);
-          $('.information').append(element.description);
-          $('.max_guest').append(element.max_guest);
-          $('.number_rooms').append(element.number_rooms);
-          $('.number_bathrooms').append(element.number_bathrooms);
       }
     });
 });
