@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         const i = ids.indexOf(id);
         ids.splice(i, 1);
       }
-      $('.amenities > h4').text(Object.keys(list).join(', '));
+      $('.amenities > h4').text(names.join(', '));
     });
     $.get('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/status/', function (data, status) {
       if (status) {
