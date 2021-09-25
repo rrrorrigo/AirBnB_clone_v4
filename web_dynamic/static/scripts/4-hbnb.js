@@ -3,7 +3,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
     $('input:checkbox').change(function() {
       if ($(this).is(":checked")) {
         const name = ($(this).attr('data-name'));
-        let new = {name:id}
+        const id = ($(this).attr('data-id'));
+        const aux = {name:id};
+        $.extend(list, aux);
       } else {
         const name = ($(this).attr('data-name'));
         const i = list.indexOf(name);
