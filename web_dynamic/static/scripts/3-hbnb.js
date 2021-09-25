@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
       const i = list.indexOf(name);
       list.splice(i, 1);
     }
-    $('.amenities > h4').append(list.join(', '));
+    $('.amenities > h4').text(list.join(', '));
   });
   $.get('http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/status/', function (data, status) {
     if (status) {
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
       $('div#api_status').removeClass('available');
     }
   });
-  /* $.ajax
+  $.ajax
     ({
       type: "POST",
       url: 'http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/',
@@ -45,5 +45,5 @@ window.addEventListener('DOMContentLoaded', (e) => {
           $('.places').append(article);
         });
       }
-    }); */
+    });
 });
