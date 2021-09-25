@@ -1,15 +1,19 @@
 window.addEventListener('DOMContentLoaded', (e) => {
-    let list = {};
+    let names = [];
+    let ids = [];
     $('input:checkbox').change(function() {
       if ($(this).is(":checked")) {
         const name = ($(this).attr('data-name'));
+        name.push(name);
         const id = ($(this).attr('data-id'));
-        const aux = {name:id};
-        $.extend(list, aux);
+        ids.push(id);
       } else {
         const name = ($(this).attr('data-name'));
-        const i = list.indexOf(name);
-        list.splice(i, 1);
+        const i = names.indexOf(name);
+        names.splice(i, 1);
+        const id = ($(this).attr('data-id'));
+        const i = ids.indexOf(id);
+        ids.splice(i, 1);
       }
       $('.amenities > h4').text(Object.keys(list).join(', '));
     });
@@ -49,7 +53,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
         }
       });
       $("button").click(function () {
-        alert(list);
+        console.log(ids);
+        console.log(names);
     }); 
   });
   
