@@ -18,14 +18,12 @@ window.addEventListener('DOMContentLoaded', (e) => {
       $('div#api_status').removeClass('available');
     }
   });
-  $.ajax
+  /* $.ajax
     ({
       type: "POST",
-      //the url where you want to sent the userName and password to
       url: 'http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/',
       dataType: 'json',
       async: false,
-      //json object to sent to the authentication url
       data: JSON.stringify({}),
       contentType : 'application/json',
       success: function (data) {
@@ -47,5 +45,5 @@ window.addEventListener('DOMContentLoaded', (e) => {
           $('.places').append(article);
         });
       }
-    });
+    }); */
 });
