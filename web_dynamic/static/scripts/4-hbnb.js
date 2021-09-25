@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         }
       });
       $("button").click(function () {
-        alert("clickeado");
+        alert(list);
     }); 
   });
   
