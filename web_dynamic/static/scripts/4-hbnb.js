@@ -12,8 +12,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
         const i = names.indexOf(name);
         names.splice(i, 1);
         const id = ($(this).attr('data-id'));
-        const i = ids.indexOf(id);
-        ids.splice(i, 1);
+        const j = ids.indexOf(id);
+        ids.splice(j, 1);
       }
       $('.amenities > h4').text(names.join(', '));
     });
