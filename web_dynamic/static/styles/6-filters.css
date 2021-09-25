@@ -49,12 +49,11 @@ button:hover {
 .amenities {
     height: 100%;
     width: 25%;
-    white-space: nowrap;
 }
 
 .amenities > h4 {
     text-overflow: ellipsis;
-
+    white-space: nowrap;
 }
 
 .popover {
