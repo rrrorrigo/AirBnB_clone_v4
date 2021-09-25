@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         }
       });
       $("button").click(function () {
-        alert(list);
+        alert(list[0].attr('data-id'));
     }); 
   });
   
