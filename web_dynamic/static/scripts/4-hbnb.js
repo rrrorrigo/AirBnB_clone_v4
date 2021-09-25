@@ -51,32 +51,34 @@ window.addEventListener('DOMContentLoaded', (e) => {
           });
         }
       });
-      $("button").click(function () {
-        let amenities_ids = {"amenities": ids};
-        $.ajax ({
-            type: "POST",
-            url: 'http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/',
-            dataType: 'json',
-            async: false,
-            data: JSON.stringify(amenities_ids),
-            contentType : 'application/json',
-            success: function (data) {
-                const article = `<article>
-            <div class="title_box">
-            <h2>${element.name}</h2>
-            <div class="price_by_night">${element.price_by_night}</div>
+    $("button").click(function () {
+      let amenities_ids = {"amenities": ids};
+      $.ajax ({
+        type: "POST",
+        url: 'http://d701e46f5948.d79346c3.hbtn-cod.io:5001/api/v1/places_search/',
+        dataType: 'json',
+        async: false,
+        data: JSON.stringify(amenities_ids),
+        contentType : 'application/json',
+        success: function (data) {
+          data.forEach(element => {
+          const article = `<article>
+          <div class="title_box">
+          <h2>${element.name}</h2>
+          <div class="price_by_night">${element.price_by_night}</div>
           </div>
           <div class="information">
-            <div class="max_guest">${element.max_guest}</div>
-                  <div class="number_rooms">${element.number_rooms}</div>
-                  <div class="number_bathrooms">${element.number_bathrooms}</div>
+          <div class="max_guest">${element.max_guest}</div>
+          <div class="number_rooms">${element.number_rooms}</div>
+          <div class="number_bathrooms">${element.number_bathrooms}</div>
           </div>
           <div class="description">
           ${element.description}
           </div>
-        </article>`;
-            $('.places').append(article);
-            }
+          </article>`;
+          $('.places').append(article);
           });
+        }
+      });
     }); 
-  });
+});
