@@ -36,10 +36,12 @@ window.addEventListener('DOMContentLoaded', (e) => {
           <div class="price_by_night">${element.price_by_night}</div>
         </div>
         <div class="information">
-          ${element.description}
           <div class="max_guest">${element.max_guest}</div>
                 <div class="number_rooms">${element.number_rooms}</div>
                 <div class="number_bathrooms">${element.number_bathrooms}</div>
+        </div>
+        <div class="description">
+        ${element.description}
         </div>
       </article>`;
           $('.places').append(article);
